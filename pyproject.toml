@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MazeSolver"
+version = "0.0.1"
+description = "A simple static site generator in Python"
+authors = [
+    { name = "Your Name", email = "your.email@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.12"
+
+# Optional, license (MIT for example)
+license = { file = "LICENSE" }
+
+# List your dependencies here (if you have any at this stage)
+dependencies = []
+
+# Optional classifiers for your project (Python versions, license, etc.)
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+homepage = "https://github.com/brinwiththevlin/maze-solver"
+repository = "https://github.com/brinwiththevlin/maze-solve"
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "coverage",
+    "flake8",
+    "black",
+    "isort",
+    "ruff",
+    "pyright",
+    "interrogate",
+]
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+fail_under = 70
+show_missing = true
+skip_covered = true
+
+[tool.interrogate]
+fail-under = 70
+ignore-module = true
